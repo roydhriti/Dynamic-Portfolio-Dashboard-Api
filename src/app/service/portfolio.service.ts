@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import yahooFinance from 'yahoo-finance2';
-import { QuoteOptions } from 'yahoo-finance2/dist/esm/src/modules/quote';
 
 @Injectable()
 export class PortfolioService {
@@ -9,15 +8,6 @@ export class PortfolioService {
 
     async getStockPrice(symbol?: string) {
         try {
-            // const queryOptions: QuoteOptions = {
-            //     fields: [
-            //         'symbol', 'shortName', 'regularMarketPrice', 'currency',
-            //         'regularMarketChange', 'regularMarketChangePercent',
-            //         'trailingPE', 'epsTrailingTwelveMonths', 'exchangeTimezoneName',
-            //         'regularMarketTime'
-            //     ],
-            //     return: 'object',
-            // };
 
             const fetchStock = async (s: string) => {
                 let formattedSymbol = s;
