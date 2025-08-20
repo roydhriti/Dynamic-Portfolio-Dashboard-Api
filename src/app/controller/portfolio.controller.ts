@@ -5,11 +5,6 @@ import { PortfolioService } from '../service/portfolio.service';
 export class PortfolioController {
     constructor(private readonly portfolioService: PortfolioService) { }
 
-    // @Get('stock-price')
-    // async getStockPrice() {
-    //     return this.portfolioService.getDefaultStockPrices();
-    // }
-
     @Get('stock-price')
     async getStockPrice(@Query('symbol') symbol?: string) {
         return this.portfolioService.getStockPrice(symbol);
