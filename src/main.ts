@@ -10,7 +10,9 @@ async function bootstrap() {
     app.useGlobalPipes(new ValidationPipe());
 
     app.enableCors({
-        origin: ['http://localhost:3000'], // your frontend URL
+        origin: ['http://localhost:3000',
+            'https://stockportfoliodashboard.netlify.app/'
+        ], // your frontend URL
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true,
     });
